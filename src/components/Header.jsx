@@ -19,7 +19,22 @@ export default function Header() {
         <nav className="hidden md:flex items-center gap-8">
           <Link to="/" className="hover:text-[color:var(--color-accent)] transition">Home</Link>
           <Link to="/about" className="hover:text-[color:var(--color-accent)] transition">About</Link>
-          <Link to="/services" className="hover:text-[color:var(--color-accent)] transition">Services</Link>
+          <div className="relative group">
+            <Link to="/services" className="hover:text-[color:var(--color-accent)] transition">
+              Services
+            </Link>
+            <div className="absolute left-0 mt-2 w-56 bg-[color:var(--color-primary-dark)] rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <Link to="/services/kontraktor-bangunan" className="block px-4 py-2 hover:bg-[color:var(--color-accent)] hover:text-[color:var(--color-primary-dark)] transition">
+                Kontraktor Bangunan
+              </Link>
+              <Link to="/services/kontraktor-jalan" className="block px-4 py-2 hover:bg-[color:var(--color-accent)] hover:text-[color:var(--color-primary-dark)] transition">
+                Kontraktor Jalan
+              </Link>
+              <Link to="/services/kontraktor-las-industrial" className="block px-4 py-2 hover:bg-[color:var(--color-accent)] hover:text-[color:var(--color-primary-dark)] transition">
+                Kontraktor Las Industrial
+              </Link>
+            </div>
+          </div>
           <Link to="/projects" className="hover:text-[color:var(--color-accent)] transition">Projects</Link>
           <Link to="/contact" className="bg-[color:var(--color-accent)] text-[color:var(--color-primary-dark)] px-4 py-2 rounded font-semibold hover:bg-[color:var(--color-accent-hover)] transition">
             Contact

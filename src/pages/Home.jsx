@@ -66,9 +66,9 @@ export default function Home() {
                 image: '/road-construction.jpg'
               },
               {
-                title: 'Konsultasi Proyek',
-                desc: 'Tim ahli siap membantu merencanakan proyek Anda dengan RAB akurat dan strategi eksekusi yang tepat.',
-                image: '/consultation-meeting.png'
+                title: 'Kontraktor Las Industrial',
+                desc: 'Layanan pengelasan profesional untuk konstruksi baja, pipa, dan struktur industrial dengan standar keamanan tinggi.',
+                image: '/las-industrial.jpg'
               }
             ].map((service, i) => (
               <div key={i} className="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition">
