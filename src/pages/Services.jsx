@@ -25,7 +25,7 @@ const buildingServices = [
   }
 ]
 
-export default function Services() {
+export default function ServiceBuilding() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
