@@ -25,7 +25,7 @@ export default function About() {
                 Motto kami: "Profesional & Modern, Fokus Pelayanan, Kualitas & Ketepatan Waktu" - adalah komitmen kami kepada setiap klien untuk menghasilkan karya konstruksi terbaik.
               </p>
             </div>
-            <div className="bg-gray-300 h-96 rounded-lg" style={{ backgroundImage: 'url(/placeholder.svg?height=400&width=400&query=construction-workers)', backgroundSize: 'cover' }}></div>
+            <div className="bg-gray-300 h-96 rounded-lg" style={{ backgroundImage: 'url(/pexels-marketingtuig-87223.jpg)', backgroundSize: 'cover' }}></div>
           </div>
         </div>
       </section>
@@ -48,6 +48,19 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      {/* Gallery */}
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="container">
+          <h2 className="section-title">Galeri Proyek Kami</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-gray-300 h-64 rounded-lg overflow-hidden" style={{ backgroundImage: 'url(/bridge-construction.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+            <div className="bg-gray-300 h-64 rounded-lg overflow-hidden" style={{ backgroundImage: 'url(/home-renovation-modern.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+            <div className="bg-gray-300 h-64 rounded-lg overflow-hidden" style={{ backgroundImage: 'url(/road-construction.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+          </div>
+        </div>
+      </section>
+
 
       {/* Values */}
       <section className="py-16 md:py-24 bg-white">
