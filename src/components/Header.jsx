@@ -18,14 +18,14 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           <Link to="/" className="hover:text-[color:var(--color-accent)] transition">Home</Link>
-          <Link to="/about" className="hover:text-[color:var(--color-accent)] transition">About</Link>
+          <Link to="/about" className="hover:text-[color:var(--color-accent)] transition">Tentang Kami</Link>
           <div className="relative group">
             <Link to="/service-building" className="hover:text-[color:var(--color-accent)] transition">
-              Services
+              Layanan
             </Link>
             <div className="absolute left-0 mt-2 w-56 bg-[color:var(--color-primary-dark)] rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
               <Link to="/service-building" className="block px-4 py-2 hover:bg-[color:var(--color-accent)] hover:text-[color:var(--color-primary-dark)] transition">
-                Kontraktor Bangunan
+                Kontraktor Properti
               </Link>
               <Link to="/service-road" className="block px-4 py-2 hover:bg-[color:var(--color-accent)] hover:text-[color:var(--color-primary-dark)] transition">
                 Kontraktor Jalan
@@ -35,9 +35,9 @@ export default function Header() {
               </Link>
             </div>
           </div>
-          <Link to="/projects" className="hover:text-[color:var(--color-accent)] transition">Projects</Link>
+          <Link to="/projects" className="hover:text-[color:var(--color-accent)] transition">Proyek</Link>
           <Link to="/contact" className="bg-[color:var(--color-accent)] text-[color:var(--color-primary-dark)] px-4 py-2 rounded font-semibold hover:bg-[color:var(--color-accent-hover)] transition">
-            Contact
+            Kontak
           </Link>
         </nav>
 
@@ -56,16 +56,16 @@ export default function Header() {
       {mobileMenuOpen && (
         <nav className="md:hidden bg-[color:var(--color-primary-dark)] p-4 flex flex-col gap-4">
           <Link to="/" className="hover:text-[color:var(--color-accent)] transition">Home</Link>
-          <Link to="/about" className="hover:text-[color:var(--color-accent)] transition">About</Link>
-          <Link to="/service-building" className="hover:text-[color:var(--color-accent)] transition">Services</Link>
+          <Link to="/about" className="hover:text-[color:var(--color-accent)] transition">Tentang Kami</Link>
+          <Link to="/service-building" className="hover:text-[color:var(--color-accent)] transition">Layanan</Link>
           <div className="flex flex-col gap-2 text-sm text-gray-200 pl-4">
-            <Link to="/service-building" className="hover:text-[color:var(--color-accent)] transition">Kontraktor Bangunan</Link>
+            <Link to="/service-building" className="hover:text-[color:var(--color-accent)] transition">Kontraktor Properti</Link>
             <Link to="/service-road" className="hover:text-[color:var(--color-accent)] transition">Kontraktor Jalan</Link>
             <Link to="/service-welding" className="hover:text-[color:var(--color-accent)] transition">Kontraktor Las Industrial</Link>
           </div>
-          <Link to="/projects" className="hover:text-[color:var(--color-accent)] transition">Projects</Link>
+          <Link to="/projects" className="hover:text-[color:var(--color-accent)] transition">Proyek</Link>
           <Link to="/contact" className="bg-[color:var(--color-accent)] text-[color:var(--color-primary-dark)] px-4 py-2 rounded font-semibold text-center">
-            Contact
+            Kontak
           </Link>
         </nav>
       )}

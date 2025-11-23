@@ -41,7 +41,7 @@ export default function ServiceBuilding() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href="https://wa.me/628385456095" className="btn-primary text-center">
-              Konsultasi Proyek Bangunan
+              Konsultasi Proyek Perumahan
             </a>
             <a href="/projects" className="btn-primary-dark border border-white/40 text-center">
               Lihat Portofolio Kami

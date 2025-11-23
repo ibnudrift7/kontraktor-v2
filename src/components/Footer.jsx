@@ -17,8 +17,7 @@ export default function Footer() {
           <h4 className="font-bold text-lg mb-4 text-[color:var(--color-accent)]">Perusahaan</h4>
           <ul className="space-y-2 text-gray-300 text-sm">
             <li><Link to="/about" className="hover:text-[color:var(--color-accent)]">Tentang Kami</Link></li>
-            <li><Link to="/services" className="hover:text-[color:var(--color-accent)]">Layanan</Link></li>
-            <li><Link to="/projects" className="hover:text-[color:var(--color-accent)]">Portofolio</Link></li>
+            <li><Link to="/projects" className="hover:text-[color:var(--color-accent)]">Proyek</Link></li>
           </ul>
         </div>
 
@@ -26,9 +25,9 @@ export default function Footer() {
         <div>
           <h4 className="font-bold text-lg mb-4 text-[color:var(--color-accent)]">Layanan</h4>
           <ul className="space-y-2 text-gray-300 text-sm">
-            <li><a href="#" className="hover:text-[color:var(--color-accent)]">Kontraktor Perumahan</a></li>
-            <li><a href="#" className="hover:text-[color:var(--color-accent)]">Kontraktor Jalan</a></li>
-            <li><a href="#" className="hover:text-[color:var(--color-accent)]">Konsultasi Proyek</a></li>
+            <li><Link to="/service-building" className="hover:text-[color:var(--color-accent)]">Kontraktor Perumahan</Link></li>
+            <li><Link to="/service-road" className="hover:text-[color:var(--color-accent)]">Kontraktor Jalan</Link></li>
+            <li><Link to="/service-welding" className="hover:text-[color:var(--color-accent)]">Kontraktor Las Industrial</Link></li>
           </ul>
         </div>
 
