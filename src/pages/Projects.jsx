@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 const projectCategories = [
+  { key: 'all', label: 'Semua Proyek' },
   { key: 'building', label: 'Kontraktor Bangunan' },
   { key: 'road', label: 'Kontraktor Jalan' },
   { key: 'welding', label: 'Kontraktor Las Industrial' }
@@ -78,11 +79,25 @@ const projectData = {
   ]
 }
 
+const categoryLabelMap = projectCategories.reduce((acc, cat) => {
+  acc[cat.key] = cat.label
+  return acc
+}, {})
+
+const categorizedProjects = Object.fromEntries(
+  Object.entries(projectData).map(([key, list]) => [
+    key,
+    list.map((project) => ({ ...project, categoryKey: key }))
+  ])
+)
+
+const allProjects = Object.values(categorizedProjects).flat()
+
 export default function Projects() {
-  const [activeCategory, setActiveCategory] = useState(projectCategories[0].key)
+  const [activeCategory, setActiveCategory] = useState('all')
   const [activeProject, setActiveProject] = useState(null)
 
-  const projects = projectData[activeCategory]
+  const projects = activeCategory === 'all' ? allProjects : categorizedProjects[activeCategory]
 
   return (
     <div className="min-h-screen">
@@ -125,7 +140,7 @@ export default function Projects() {
               <div
                 key={project.title}
                 className="bg-gray-50 rounded-lg overflow-hidden hover:shadow-xl transition cursor-pointer"
-                onClick={() => setActiveProject({ ...project, category: projectCategories.find((c) => c.key === activeCategory)?.label })}
+                onClick={() => setActiveProject({ ...project, category: categoryLabelMap[project.categoryKey] })}
               >
                 <div
                   className="h-48 bg-gray-300"
@@ -133,7 +148,7 @@ export default function Projects() {
                 ></div>
                 <div className="p-6 space-y-2">
                   <p className="text-sm text-[color:var(--color-accent)] font-semibold">
-                    {projectCategories.find((c) => c.key === activeCategory)?.label}
+                    {categoryLabelMap[project.categoryKey]}
                   </p>
                   <h3 className="font-bold text-lg">{project.title}</h3>
                   <p className="text-gray-500 text-sm">{project.location} • {project.scope}</p>
