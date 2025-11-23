@@ -9,10 +9,10 @@ export default function Header() {
       <div className="container flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 font-bold text-xl md:text-2xl">
-          <div className="w-8 h-8 bg-[color:var(--color-accent)] rounded flex items-center justify-center text-[color:var(--color-primary-dark)]">
-            S
+          <div className="h-12 bg-[#fff] rounded-sm p-1 flex items-center justify-center text-[color:var(--color-primary-dark)]">
+            <img src="/logo-sentral.png" alt="PT. Sentral Indonesia Logo" className="w-full h-full object-contain" />
           </div>
-          <span>PT. Sentral</span>
+          <span>PT. Sentral Indonesia</span>
         </Link>
 
         {/* Desktop Navigation */}

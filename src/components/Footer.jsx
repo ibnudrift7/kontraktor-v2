@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12 md:py-16">
+    <footer className="bg-[color:var(--color-primary)] border-t-4 border-[color:var(--color-accent)] text-white py-12 md:py-16">
       <div className="container grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
         {/* About */}
         <div>
-          <h4 className="font-bold text-lg mb-4">PT. Sentral Indonesia</h4>
+          <h4 className="font-bold text-lg mb-4 text-[color:var(--color-accent)]">PT. Sentral Indonesia</h4>
           <p className="text-gray-300 text-sm">
             Kami adalah mitra kontraktor terpercaya dengan 15+ tahun pengalaman membangun proyek berkualitas di Surabaya dan Jawa Timur.
           </p>
@@ -14,7 +14,7 @@ export default function Footer() {
 
         {/* Company */}
         <div>
-          <h4 className="font-bold text-lg mb-4">Perusahaan</h4>
+          <h4 className="font-bold text-lg mb-4 text-[color:var(--color-accent)]">Perusahaan</h4>
           <ul className="space-y-2 text-gray-300 text-sm">
             <li><Link to="/about" className="hover:text-[color:var(--color-accent)]">Tentang Kami</Link></li>
             <li><Link to="/services" className="hover:text-[color:var(--color-accent)]">Layanan</Link></li>
@@ -24,7 +24,7 @@ export default function Footer() {
 
         {/* Services */}
         <div>
-          <h4 className="font-bold text-lg mb-4">Layanan</h4>
+          <h4 className="font-bold text-lg mb-4 text-[color:var(--color-accent)]">Layanan</h4>
           <ul className="space-y-2 text-gray-300 text-sm">
             <li><a href="#" className="hover:text-[color:var(--color-accent)]">Kontraktor Perumahan</a></li>
             <li><a href="#" className="hover:text-[color:var(--color-accent)]">Kontraktor Jalan</a></li>
@@ -34,7 +34,7 @@ export default function Footer() {
 
         {/* Contact */}
         <div>
-          <h4 className="font-bold text-lg mb-4">Hubungi Kami</h4>
+          <h4 className="font-bold text-lg mb-4 text-[color:var(--color-accent)]">Hubungi Kami</h4>
           <div className="space-y-2 text-gray-300 text-sm">
             <p>📲 WhatsApp: <a href="https://wa.me/628385456095" className="hover:text-[color:var(--color-accent)]">0838 5456 0095</a></p>
             <p>📧 Email: info@sentralindonesia.co.id</p>
