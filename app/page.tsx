@@ -1,35 +1,36 @@
-"use client"
+import dynamic from 'next/dynamic'
+import { Suspense } from 'react'
+import Header from '@/components/header'
+import Hero from '@/components/hero'
+import FeaturedServices from '@/components/featured-services'
+import YellowBanner from '@/components/yellow-banner'
+import WhatWeDo from '@/components/what-we-do'
+import AboutSection from '@/components/about-section'
+import TrustBuilder from '@/components/trust-builder'
+import NewsSection from '@/components/news-section'
+import Testimonials from '@/components/testimonials'
+import Footer from '@/components/footer'
 
-import { useState, useEffect } from "react"
-import Navigation from "@/src/components/Navigation"
-import Hero from "@/src/components/Hero"
-import Services from "@/src/components/Services"
-import Portfolio from "@/src/components/Portfolio"
-import About from "@/src/components/About"
-import Contact from "@/src/components/Contact"
-import Footer from "@/src/components/Footer"
+const FAQSection = dynamic(() => import('@/components/faq-section'), {
+  loading: () => <div className="h-96 bg-muted/20 animate-pulse" />,
+})
 
-export default function Page() {
-  const [isScrolled, setIsScrolled] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
-
+export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
-      <Navigation isScrolled={isScrolled} />
+    <main className="min-h-screen bg-background">
+      <Header />
       <Hero />
-      <Services />
-      <Portfolio />
-      <About />
-      <Contact />
+      <FeaturedServices />
+      <YellowBanner />
+      <WhatWeDo />
+      <AboutSection />
+      <TrustBuilder />
+      <NewsSection />
+      <Testimonials />
+      <Suspense fallback={<div className="h-96 bg-muted/20 animate-pulse" />}>
+        <FAQSection />
+      </Suspense>
       <Footer />
-    </div>
+    </main>
   )
 }
