@@ -1,13 +1,13 @@
 const weldingServices = [
   {
     title: 'Fabrication Struktur Baja',
-    image: '/industrial-welding.jpg',
+    image: '/pexels-rezwan-1145434.jpg',
     desc: 'Pembuatan rangka baja untuk gudang, pabrik, dan area komersial dengan teknik las SMAW/GMAW bersertifikat.',
     highlights: ['Workshop lengkap + overhead crane', 'QC visual & NDT', 'Finishing cat anti-karat']
   },
   {
     title: 'Pipa Industrial & Utilitas',
-    image: '/pipeline-welding.jpg',
+    image: '/pexels-watorious-2381463.jpg',
     desc: 'Instalasi pipa carbon/stainless untuk sistem air, gas, dan fire fighting dengan standar ASME.',
     highlights: ['Procedure Qualification Record (PQR)', 'Hydrotest & pressure test', 'Dokumentasi weld map']
   },
